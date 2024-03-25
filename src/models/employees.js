@@ -1,9 +1,8 @@
 const { DataTypes } = require("sequelize");
-const sequelize = require("../config/db");
-const { toDefaultValue } = require("sequelize/types/utils");
+const sequelize = require("../config/db");;
 
-const User = sequelize.define(
-  "User",
+const Employees = sequelize.define(
+  "Employees ",
   {
     id: {
       type: DataTypes.UUID,
@@ -25,9 +24,13 @@ const User = sequelize.define(
       type: DataTypes.STRING,
       allowNull: false,
     }, 
+    isadmin : {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
+    }
   },
   { timestamps: true }
 );
 
 
-module.exports =  User;
+module.exports =  Employees ;

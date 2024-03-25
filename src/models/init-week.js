@@ -2,8 +2,12 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("../config/db");
 
-const WeekWorked = sequelize.define("WeekWorked", {
-  employeeId: {
-    type: DataTypes.INTEGER,
-  },
+const Initweek = sequelize.define("WeekWorked", {
+    weekinit: {
+        type: DataTypes.DATE,
+        allowNull: false
+    },
 });
+
+
+module.exports= Initweek; 
