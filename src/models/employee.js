@@ -17,7 +17,7 @@ const Employee = sequelize.define(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    employeeID: {
+    employenumber: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
@@ -26,7 +26,7 @@ const Employee = sequelize.define(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    weeklySalary: {
+    hourlyrate: {
       type: DataTypes.FLOAT,
       allowNull: false,
     },
